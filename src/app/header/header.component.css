@@ -1,0 +1,41 @@
+.navbar {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+nav {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(210deg, rgba(2, 0, 36, 1) 0%, rgba(0, 100, 30, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  min-height: 70px;
+}
+a{
+  margin: 0 1em 0 1em;  
+}
+.text{
+  /* font-weight: 10px; */
+  font-size: large;
+}
+
+span:hover{
+  color: white;
+}
+span{
+  font-size: large;
+}
+
+h2{
+  /* margin-bottom: 20px !important; */
+}
+.user{
+  /* float: right;
+  color: white;
+  font-weight: bold; */
+  color: white;
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  font-size: 40px;
+  margin-right: 3em;
+  margin-bottom: 1em;
+  margin-top: 0em;
+}

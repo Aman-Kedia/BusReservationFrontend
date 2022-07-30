@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-image: url(../../assets/home_bus_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: top left;
+  /* animation: mymove 10s infinite; */
+  border: 0;
+}
+
+p {
+  opacity: 1;
+}
+
+h2 {
+  margin-left: 30%;
+  padding-top: 2em;
+  margin-top: 0 !important;
+}
+
+@keyframes mymove {
+  50% {
+    background-position: center;
+  }
+}
+
+form {
+  /* border: 3px solid #f1f1f1; */
+  padding-bottom: 20%;
+
+}
+
+select{
+  min-width: 50%;
+  padding: 12px 20px;
+  margin: 8px 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=text],
+input[type=password]  {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=date] {
+  width: 18%;
+  padding: 12px 20px;
+  margin: 8px 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(342deg, rgba(2, 0, 36, 1) 0%, rgba(14, 95, 14, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8em;
+  width: 25%;
+  font-size: 1em;
+}
+
+button:hover {
+  opacity: 0.9;
+  color: black;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  position: relative;
+  height: 20%;
+  left: 1em;
+  background-color: #fff;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid;
+  /* box-shadow: 5px 10px #888888; */
+  width: 30%;
+  margin-left: 50%;
+  opacity: 0.9;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 1200px) {
+  .btn {
+    width: 60%;
+  }
+
+  .container {
+    padding: 16px;
+    text-align: center;
+    border: 1px solid;
+    /* box-shadow: 5px 10px #888888; */
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .btn {
+    /* width: 100%; */
+  }
+
+  .container {
+    /* padding: 16px; */
+    text-align: center;
+    border: 1px solid;
+    /* box-shadow: 5px 10px #888888; */
+    width: 80%;
+    margin-left: 10%
+  }
+}

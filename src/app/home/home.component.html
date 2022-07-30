@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+
+
+  <form action="/action_page.php" method="post">
+    <!-- <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div> -->
+    <h2>BUS RESERVATION</h2>
+    <div class="container">
+
+      <form #Form="ngForm" (ngSubmit)="onSubmit()">
+        <label for="uname"><b>To From</b></label>
+        <!-- <input type="text" placeholder="Enter Source"required name = "source" [(ngModel)]="route.origin" #usource =ngModel > -->
+        <select name="origin" [(ngModel)]="r.origin">
+          <option *ngFor="let orgn of originList" value={{orgn}}>{{orgn}}</option>
+        </select>
+        <br />
+
+        <label for="psw"><b>From to</b></label>
+        <!-- <input type="text" placeholder="Enter Destination" required name = "destination" [(ngModel)]="r.destination" #udestination =ngModel > -->
+        <select name="destination" [(ngModel)]="r.destination">
+          <option *ngFor="let dest of destinationList" value={{dest}}>{{dest}}</option>
+        </select>
+        <br />
+        <label for="birthday"><b>Date of Journey : </b></label>
+        <input style="width:35%" min={{minDate}} type="date" id="doj" name="dateOfJourney" [(ngModel)]="r.date" required
+          #udate="ngModel">
+        <br />
+        <button type="submit" class="btn" [disabled]="Form.invalid">Proceed</button>
+      </form>
+
+    </div>
+
+  </form>
+
+</body>
+
+</html>

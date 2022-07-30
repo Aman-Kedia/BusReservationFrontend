@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Payment</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
+</head>
+
+<body>
+    <div class="container-fluid px-0" id="bg-div">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-12">
+                <div class="card card0">
+                    <div class="d-flex" id="wrapper">
+                        <!-- Sidebar -->
+                        <div class="bg-light border-right" id="sidebar-wrapper">
+                            <div class="sidebar-heading pt-5 pb-4">
+                                <strong>PAY WITH</strong>
+                            </div>
+                            <div class="list-group list-group-flush">
+                                <a data-toggle="tab" href="#menu1" id="tab1" class="tabs list-group-item bg-light">
+                                    <div class="list-div my-2">
+                                        <div class="fa fa-home"></div>
+                                        NetBanking
+                                    </div>
+                                </a>
+                                <a data-toggle="tab" href="#menu2" id="tab2" class="tabs list-group-item">
+                                    <div class="list-div my-2">
+                                        <div class="fa fa-credit-card"></div>
+                                        Credit/Debit Card
+                                    </div>
+                                </a>
+                                <a data-toggle="tab" href="#menu3" id="tab3" class="tabs list-group-item bg-light">
+                                    <div class="list-div my-2">
+                                        <div class="fa fa-upi"></div>
+                                        UPI
+                                    </div>
+                                </a>
+                                <a data-toggle="tab" href="#menu4" id="tab4" class="tabs list-group-item bg-light">
+                                    <div class="list-div my-2">
+                                        <div class="fa fa-qrcode"></div> Visa QR
+                                    </div>
+                                </a>
+                                <a data-toggle="tab" href="#menu5" id="tab5" class="tabs list-group-item bg-light">
+                                    <div class="list-div my-2">
+                                        <div class="fa fa-wallet"></div>
+                                        Wallet <span id="new-label">NEW</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Page Content -->
+                        <div id="page-content-wrapper">
+                            <div class="row pt-3" id="border-btm">
+                                <div class="col-4">
+                                    <button class="btn btn-success mt-4 ml-3 mb-3" id="menu-toggle">
+                                        <div class="bar4"></div>
+                                        <div class="bar4"></div>
+                                        <div class="bar4"></div>
+                                    </button>
+                                </div>
+                                <div class="col-8">
+                                    <div class="row justify-content-right">
+                                        <div class="col-12">
+                                            <p class="mb-0 mr-4 mt-4 text-right">
+                                                <!-- {{email}} -->
+                                                email
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-right">
+                                        <div class="col-12">
+                                            <p class="mb-0 mr-4 text-right">
+                                                Pay
+                                                <span class="top-highlight">
+                                                    ₹ "fare"
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="text-center" id="test">
+                                    Pay
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div id="menu1" class="tab-pane">
+                                    <div class="row justify-content-center">
+                                        <div class="col-11">
+                                            <div class="form-card">
+                                                <h3 class="mt-0 mb-4 text-center">
+                                                    Select your bank to pay
+                                                </h3>
+                                                <form onsubmit="event.preventDefault()">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="select">
+                                                                <span class="focus">
+                                                                    <select name="bank" id="standard-select">
+                                                                        <option value="hdfc">HDFC Bank</option>
+                                                                        <option value="icici">ICICI Bank</option>
+                                                                        <option value="kotak">Kotak Mahindra Bank
+                                                                        </option>
+                                                                        <option value="sbi">State Bank of India</option>
+                                                                        <option value="axis">Axis Bank</option>
+                                                                        <option value="indusind">IndusInd Bank</option>
+                                                                        <option value="yes">Yes Bank</option>
+                                                                        <option value="bob">Bank Of Baroda</option>
+                                                                    </select>
+                                                                </span>
+                                                            </div>
+                                                            <br />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <input type="submit" value="Pay ₹ fare"
+                                                                class="btn btn-success placeicon" />
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="menu2" class="tab-pane in active">
+                                    <div class="row justify-content-center">
+                                        <div class="col-11">
+                                            <div class="form-card">
+                                                <h3 class="mt-0 mb-4 text-center">
+                                                    Enter your card details to pay
+                                                </h3>
+                                                <form onsubmit="event.preventDefault()">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="input-group">
+                                                                <input type="text" id="card_name"
+                                                                    placeholder="John Smith" />
+                                                                <label>CARD HOLDER'S NAME</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="input-group">
+                                                                <input type="text" id="card_no"
+                                                                    placeholder="0000 0000 0000 0000" minlength="19"
+                                                                    maxlength="19" />
+                                                                <label>CARD NUMBER</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <input type="text" name="exp" id="exp"
+                                                                    placeholder="MM/YY" minlength="5" maxlength="5" />
+                                                                <label>CARD EXPIRY</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <input type="password" name="cvcpwd"
+                                                                    placeholder="&#9679;&#9679;&#9679;"
+                                                                    class="placeicon" minlength="3" maxlength="3" />
+                                                                <label>CVV</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <input type="submit" value="Pay ₹ fare"
+                                                                class="btn btn-success placeicon" />
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="menu3" class="tab-pane">
+                                    <div class="row justify-content-center">
+                                        <div class="col-11">
+                                            <div class="form-card">
+                                                <h3 class="mt-0 mb-4 text-center">
+                                                    Enter your UPI details to pay
+                                                </h3>
+                                                <form onsubmit="event.preventDefault()">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="input-group">
+                                                                <input type="text" id="card_name"
+                                                                    placeholder="johnsmith@hdfcbank" />
+                                                                <label>UPI Id</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <input type="submit" value="Pay ₹ fare"
+                                                                class="btn btn-success placeicon" />
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="menu4" class="tab-pane">
+                                    <div class="row justify-content-center">
+                                        <div class="col-11">
+                                            <h3 class="mt-0 mb-4 text-center">Scan the QR code to pay</h3>
+                                            <div class="row justify-content-center">
+                                                <div id="qr"> <img src="https://i.imgur.com/DD4Npfw.jpg" width="200px"
+                                                        height="200px"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="menu5" class="tab-pane">
+                                    <div class="row justify-content-center">
+                                        <div class="col-11">
+                                            <h3 class="mt-0 mb-4 text-center">
+                                                Select your wallet to pay
+                                            </h3>
+                                            <form onsubmit="event.preventDefault()">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="radio-group">
+                                                            <input type="radio" checked />
+                                                            <label>Bus Wallet</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-card">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <input type="submit" value="Pay ₹ fare"
+                                                                class="btn btn-success placeicon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.8.1/css/all.css"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+
+            $("#tab1").click(function () {
+                $(".tabs").removeClass("active1");
+                $(".tabs").addClass("bg-light");
+                $("#tab1").addClass("active1");
+                $("#tab1").removeClass("bg-light");
+            });
+            $("#tab2").click(function () {
+                $(".tabs").removeClass("active1");
+                $(".tabs").addClass("bg-light");
+                $("#tab2").addClass("active1");
+                $("#tab2").removeClass("bg-light");
+            });
+            $("#tab3").click(function () {
+                $(".tabs").removeClass("active1");
+                $(".tabs").addClass("bg-light");
+                $("#tab3").addClass("active1");
+                $("#tab3").removeClass("bg-light");
+            });
+            $("#tab4").click(function () {
+                $(".tabs").removeClass("active1");
+                $(".tabs").addClass("bg-light");
+                $("#tab4").addClass("active1");
+                $("#tab4").removeClass("bg-light");
+            });
+            $("#tab5").click(function () {
+                $(".tabs").removeClass("active1");
+                $(".tabs").addClass("bg-light");
+                $("#tab5").addClass("active1");
+                $("#tab5").removeClass("bg-light");
+            });
+            $('#card_no').on('keyup', function (e) {
+                var val = $(this).val();
+                var newval = '';
+                val = val.replace(/\s/g, '');
+                for (var i = 0; i < val.length; i++) {
+                    if (i % 4 == 0 && i > 0) newval = newval.concat(' ');
+                    newval = newval.concat(val[i]);
+                }
+                $(this).val(newval);
+            });
+        });
+    </script>
+</body>
+
+</html>

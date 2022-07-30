@@ -1,0 +1,23 @@
+.item{
+    width: 80%; 
+}
+
+.wrapper_inner{
+    border: 1px solid black;
+}
+.flex-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box {
+    background-color: orange;
+    margin: 20px;
+    width: 20%;
+    padding: 20px;
+  }
+
+  .content{
+    width: 100%;
+  }

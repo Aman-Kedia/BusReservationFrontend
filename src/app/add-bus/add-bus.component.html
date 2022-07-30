@@ -1,0 +1,84 @@
+<!--  Wrapper container    -->
+<div class="wrapper">
+    <div class="wrapper_inner">
+        <div class="vertical_wrap">
+        <div class="backdrop"></div>
+        <div class="vertical_bar">
+            <div class="profile_info">
+                <!----
+                <div class="img_holder">
+                    <img src="pic.png" alt="profile_pic">
+                </div>
+                routerLink="/heroes"
+
+            -->
+          
+                
+            </div>
+            <ul class="menu">
+             
+                <li><a [routerLink]='["/addBuses"]'>
+                    <span class="icon"><i class="fas fa-plus"></i></span>
+                    <span class="text">Add bus</span>
+                </a></li>
+             
+                <li><a  [routerLink]='["/updateBuses"]' >
+                    <span class="icon"><i class="fas fa-recycle"></i></span>
+                    <span class="text">Update Bus</span>
+                </a></li>
+                <li><a [routerLink]='["/addRoute"]'>
+                    <span class="icon"> <i class=" fas fa-plus"></i></span>
+                    <span class="text">Add Route</span>
+                </a></li>
+                <li><a [routerLink]='["/adminHome"]'>
+                    <span class="icon"><i class="fas fa-recycle"></i></span>
+                    <span class="text"> Update Route</span>
+                </a></li>
+            </ul>
+
+            
+        </div>
+    </div>
+  
+  
+
+<!--- Main Container  -->
+<div class="main_container">
+    <!--  top Vertical Bar  -->
+    <div class="top_bar">
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+      
+    </div>
+    <div class="container">
+            <div class="content">
+                <div class="item">
+
+
+                    <form>
+                        <input type="text" placeholder="Bus Registration No"><br><br>
+                        <p>Bus Type</p>
+                          <input type="radio" id="Ac" name="btype" >
+                          <label >AC</label><br>
+                          <input type="radio" id="Non-Ac" name="btype">
+                          <label >Non-AC</label><br>
+                
+                        
+                          <br>  
+                        <input type="text" placeholder=" Fare"><br><br>
+                        <input type="text" placeholder="Arrival Time"><br><br>
+                        <input type="text" placeholder="Departure Time"><br><br>
+                        <input type="number" placeholder="Capacity"><br><br>
+                        <input type="text" placeholder=" Route Id"><br><br>
+                        
+
+                        <button type="submit">Add Bus</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    
+</div>
+

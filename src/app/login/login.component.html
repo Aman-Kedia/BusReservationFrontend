@@ -1,0 +1,64 @@
+<div class="container {{signUp}}" id="container">
+	<div class="form-container sign-up-container">
+		<form #sign="ngForm" (ngSubmit)="signUpSubmit()">
+			<h1>Create Account</h1>
+			<input type="text" placeholder="Enter First Name" required name="source" [(ngModel)]="user.firstName"
+				#fName=ngModel pattern="[a-zA-Z]*$">
+			<!-- <div *ngIf="fName.errors?.['pattern']" style="color:red">Invalid First name</div>  -->
+			<input type="text" placeholder="Enter Last Name" required name="source" [(ngModel)]="user.lastName"
+				#sName=ngModel pattern="[a-zA-Z]*$">
+			<!-- <div *ngIf="sName.errors?.['pattern']" style="color:red">Invalid Name</div>  -->
+			<input type="number" placeholder="Enter Phone Number" required name="source" [(ngModel)]="user.phoneNo"
+				#sName=ngModel>
+			<input type="email" placeholder="Enter Email" required name="source" [(ngModel)]="user.email"
+				#lemail=ngModel>
+			<input type="password" placeholder="Enter Password" required name="source" [(ngModel)]="user.password"
+				#password=ngModel pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}">
+
+			<input type="date" max="{{maxDate}}" id="dob" name="dateOfBirth" [(ngModel)]="user.dateOfBirth" required
+				#udate="ngModel">
+			<div class="some-class">
+				<input type="radio" class="radio" name="x" value="Male" id="y" [(ngModel)]="user.gender" />
+				<label for="y">Male</label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" class="radio" name="x" value="Female" id="z" [(ngModel)]="user.gender" />
+				<label for="z">Female</label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" class="radio" name="y" value="Other" id="x" [(ngModel)]="user.gender" />
+				<label for="z">Other</label>
+			</div>
+			<button type="submit">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form #loginForm="ngForm" (ngSubmit)="signInSubmit()">
+			<h1>Sign in</h1>
+			<input type="email" placeholder="Enter Email Id" required name="source" [(ngModel)]="login.email"
+				#userName=ngModel>
+			<div *ngIf="userName.errors?.['pattern']" style="color:red">Invalid name</div>
+			<input type="password" placeholder="Enter Password" required name="destination" [(ngModel)]="login.password"
+				#password=ngModel pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}">
+			<div *ngIf="password.invalid && (password.dirty || password.touched)">
+				<div *ngIf="password.errors?.['required']" style="color:red">Enter password</div>
+				<div *ngIf="password.errors?.['pattern']" style="color:red">Invalid password</div>
+			</div>
+			<!-- <input type="checkbox" id="Admin" name="Admin" value="isAdmin">
+			<label for="vehicle1"> isAdmin</label><br> -->
+			<button type="submit">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn" (click)="signInClick()">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp" (click)="signUpClick()">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
